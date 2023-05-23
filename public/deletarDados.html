@@ -45,7 +45,7 @@
 
     function deletarDados() {
         const id = document.getElementById('id').value;
-        fetch(`http://localhost:3000/cadastro/${id}`, {
+        fetch(`cadastro/${id}`, {
             method: 'DELETE'
         })
             .then(response => response.json())
