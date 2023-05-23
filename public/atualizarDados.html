@@ -61,7 +61,7 @@
         const tamProd = document.getElementById('tamProd').value;
         const descontoProd = document.getElementById('descontoProd').value;
 
-        fetch(`http://localhost:3000/cadastro/${id}`, {
+        fetch(`cadastro/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
