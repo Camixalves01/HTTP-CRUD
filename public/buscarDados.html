@@ -55,7 +55,7 @@
 
     function buscarDados() {
         const id = document.getElementById('id').value;
-        fetch(`http://localhost:3000/cadastro/${id}`, {
+        fetch(`cadastro/${id}`, {
             method: 'GET'
         })
             .then(response => response.json())
