@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <title>Deletar Dados</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navigation">
+            <img src="imagens/Logo.png" height="70" width="100" class="logo" />
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="bemvindo.html">Home</a></li>
+                <li class="nav-item"><a href="buscarDados.html">Buscar </a></li>
+                <li class="nav-item"><a href="atualizarDados.html">Atualizar </a></li>
+                <li class="nav-item"><a href="deletarDados.html">Deletar </a></li>
+                <i class='bx bx-search'></i>
+            </ul>
+        </nav>
+    </header>
+
+    <center>
+        <h1>Deletar Produto</h1>
+    </center>
+
+    <form class="formulario">
+
+        <div class="metade left">
+            <input type="text" id="id" placeholder="ID do Produto">
+        </div>
+        <input type="button" onclick="deletarDados()" value="Deletar" class="btn-submit">
+
+        <br><br>
+
+    </form>
+
+</body>
+
+<script>
+    //Delete = Delete
+
+    function deletarDados() {
+        const id = document.getElementById('id').value;
+        fetch(`http://localhost:3000/cadastro/${id}`, {
+            method: 'DELETE'
+        })
+            .then(response => response.json())
+
+            alert("Dados deletados com sucesso!");
+            window.location.reload();
+    }
+</script>
+
+</html>

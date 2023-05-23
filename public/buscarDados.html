@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <title>Buscar Produto</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navigation">
+            <img src="imagens/Logo.png" height="70" width="100" class="logo" />
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="bemvindo.html">Home</a></li>
+                <li class="nav-item"><a href="cadProduto.html">Cadastrar </a></li>
+                <li class="nav-item"><a href="atualizarDados.html">Atualizar </a></li>
+                <li class="nav-item"><a href="deletarDados.html">Deletar </a></li>
+                <i class='bx bx-search'></i>
+            </ul>
+        </nav>
+    </header>
+
+    <center>
+        <h1>Buscar Produto</h1>
+    </center>
+
+    <form class="formulario">
+
+        <div class="metade left">
+            <input type="text" id="id" placeholder="ID do Produto">
+        </div>
+
+        <input type="button" onclick="buscarDados()" value="Buscar" class="btn-submit">
+        <br><br>
+
+    </form>
+
+    <br><br>
+    <span id="nomeExibir">Carregando nome... </span>
+    <br><br>
+    <span id="descExibir">Carregando Descrição... </span>
+    <br><br>
+    <span id="precExibir">Carregando Preço... </span>
+
+    
+
+
+</body>
+
+<script>
+    //Get = Read
+
+    function buscarDados() {
+        const id = document.getElementById('id').value;
+        fetch(`http://localhost:3000/cadastro/${id}`, {
+            method: 'GET'
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
+                document.getElementById('nomeExibir').innerHTML = data.nomeProd;
+                document.getElementById('descExibir').innerHTML = data.descProd;
+                document.getElementById('precExibir').innerHTML = data.precProd;
+
+            })
+    }
+</script>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <title>Atualizar Dados</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navigation">
+            <img src="imagens/Logo.png" height="70" width="100" class="logo" />
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="bemvindo.html">Home</a></li>
+                <li class="nav-item"><a href="cadProduto.html">Cadastrar </a></li>
+                <li class="nav-item"><a href="buscarDados.html">Buscar </a></li>
+                <li class="nav-item"><a href="deletarDados.html">Deletar </a></li>
+                <i class='bx bx-search'></i>
+            </ul>
+        </nav>
+    </header>
+    
+    <center>
+        <h1>Atualizar Dados</h1>
+    </center>
+
+    <form class="formulario">
+        <div class="metade left">
+
+            <input type="text" id="id" placeholder="ID do Produto">
+            <input type="text" id="nomeProd" placeholder="Nome do Produto">
+            <input type="text" id="descProd" placeholder="Descrição do Produto">
+            <input type="text" id="precProd" placeholder="Preço do Produto">
+        </div>
+
+        <div class="metade right">
+            <input type="text" id="anoProd" placeholder="Ano do Produto">
+            <input type="text" id="marcProd" placeholder="Marca do Produto">
+            <input type="text" id="tamProd" placeholder="Tamanho do Produto">
+            <input type="text" id="descontoProd" placeholder="Desconto Max Produto">
+        </div>
+        <input type="button" onclick="atualizarDados()" value="Atualizar" class="btn-submit">
+    </form>
+
+</body>
+
+<script>
+    //Put = Update
+
+    function atualizarDados() {
+        const id = document.getElementById('id').value;
+        const nomeProd = document.getElementById('nomeProd').value;
+        const descProd = document.getElementById('descProd').value;
+        const precProd = document.getElementById('precProd').value;
+
+        const anoProd = document.getElementById('anoProd').value;
+        const marcProd = document.getElementById('marcProd').value;
+        const tamProd = document.getElementById('tamProd').value;
+        const descontoProd = document.getElementById('descontoProd').value;
+
+        fetch(`http://localhost:3000/cadastro/${id}`, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({ nomeProd: nomeProd, descProd: descProd, precProd: precProd,
+                anoProd: anoProd, marcProd: marcProd, tamProd: tamProd, descontoProd: descontoProd})
+        })
+            .then(Response => response.json)
+
+            alert("Dados atualizados com sucesso!");
+            window.location.reload();
+    }
+</script>
+
+</html>

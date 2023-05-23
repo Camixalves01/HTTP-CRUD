@@ -1,0 +1,74 @@
+{
+  "cadastro": [
+    {
+      "nomeProd": "Notebook IdeaPad 3i",
+      "descProd": "i7-1165G7 16GB 512GB SSD Intel Iris Xe",
+      "precProd": "R$ 4.399,12",
+      "anoProd": "Windows 11 15.6\" 82MD0006BR",
+      "marcProd": "Lenovo ",
+      "tamProd": "15,6” HD",
+      "descontoProd": "10%",
+      "id": 1
+    },
+    {
+      "nomeProd": "Notebook Inspiron 15 3000",
+      "descProd": "Intel Core i7 8GB - 256GB SSD",
+      "precProd": "R$ 4.230,57",
+      "anoProd": "Windows 11 i15-i1100-A60P",
+      "marcProd": "Dell",
+      "tamProd": "15,6” Full HD",
+      "descontoProd": "",
+      "id": 2
+    },
+    {
+      "nomeProd": "Tablet Samsung S6 Lite P619 ",
+      "descProd": "128GB, 4G, Wi-fi, Câmera 8MP, Android 12 e Processador Octa Core ",
+      "precProd": "R$ 2.339,10",
+      "anoProd": "2020",
+      "marcProd": " Samsung",
+      "tamProd": "Tela 10.4\"",
+      "descontoProd": "5%",
+      "id": 5
+    },
+    {
+      "nomeProd": "Kindle Paperwhite",
+      "descProd": "32 GB: , carregamento sem fio e luz frontal adaptável",
+      "precProd": "R$854,05",
+      "anoProd": "2019",
+      "marcProd": "Marca: Amazon",
+      "tamProd": "tela de 6,8\"",
+      "descontoProd": "5%",
+      "id": 6
+    },
+    {
+      "nomeProd": "Echo Dot",
+      "descProd": "(4ª Geração): Smart Speaker com Alexa",
+      "precProd": "R$251,10",
+      "anoProd": "2020",
+      "marcProd": "Marca: Amazon",
+      "tamProd": "PEQUENO",
+      "descontoProd": "5%",
+      "id": 7
+    },
+    {
+      "nomeProd": "Fire TV Stick Lite",
+      "descProd": "Streaming em Full HD com Alexa | Com Controle",
+      "precProd": "R$224,10",
+      "anoProd": "2020",
+      "marcProd": "Marca: Amazon",
+      "tamProd": "PEQUENO",
+      "descontoProd": "5%",
+      "id": 8
+    },
+    {
+      "nomeProd": "iMac",
+      "descProd": "Memória unificada de 8 GB SSD de 256 GB",
+      "precProd": "R$ 14.799,00",
+      "anoProd": "2020",
+      "marcProd": "APLLE",
+      "tamProd": "24 polegadas",
+      "descontoProd": "10%",
+      "id": 9
+    }
+  ]
+}
